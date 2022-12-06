@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { useForm, ValidationError } from '@formspree/react';
 
 import tw from 'tailwind-styled-components';
@@ -95,12 +97,26 @@ const Send = tw(motion.button)`
 `;
 
 export const ContactForm = () => {
+
+	const [ firstName, setFirstName ] = useState<string>('');
+	const [ surname, setSurname ] = useState<string>('');
+	const [ email, setEmail ] = useState<string>('');
+	const [ message, setMessage ] = useState<string>('');
+
 	const [ state, handleSubmit ] = useForm(
 		process.env.REACT_APP_CONTACT_CODE as string
 	);
 
-	if (state.succeeded)
-		console.log('Email sent!!!')
+	if (state.succeeded) {
+		console.log('Email sent!!!');
+		
+		setInterval(() => {
+			setFirstName('');
+			setSurname('');
+			setEmail('');
+			setMessage('');
+		}, 1000);
+	}
 
 	return (
 		<Form onSubmit={handleSubmit}>
@@ -110,6 +126,8 @@ export const ContactForm = () => {
 					<Input
 						id='firstName'
 						name='firstName'
+						value={firstName}
+						onChange={e => setFirstName(e.target.value)}
 						placeholder='Your first name'
 					/>
 					<ValidationError
@@ -123,6 +141,8 @@ export const ContactForm = () => {
 					<Input
 						id='surname'
 						name='surname'
+						value={surname}
+						onChange={e => setSurname(e.target.value)}
 						placeholder='Your surname'
 					/>
 					<ValidationError
@@ -138,6 +158,8 @@ export const ContactForm = () => {
 					id='email'
 					name='email'
 					type='email'
+					value={email}
+					onChange={e => setEmail(e.target.value)}
 					placeholder='Your email'
 				/>
 				<ValidationError
@@ -151,6 +173,8 @@ export const ContactForm = () => {
 				<Message
 					id='message'
 					name='message'
+					value={message}
+					onChange={e => setMessage(e.target.value)}
 					placeholder='Your message'
 				/>
 				<ValidationError
