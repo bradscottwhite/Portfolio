@@ -1,13 +1,27 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*.light {
+	--color-bg-primary: white;
+	--color-bg-secondary: hunter-green;
+	--color-text-primary: dark-red;
+	--color-text-secondary: barn-red;
+	--color-text-accent: dark-jungle-green;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.dark {
+	--color-bg-primary: dark-red;
+	--color-bg-secondary: rosewood;
+	--color-text-primary: hunter-green2;
+	--color-text-secondary: white;
+	--color-text-accent: wintergreen-dream;
+}
+
+:root {
+	@apply .light;
+}*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply overflow-visible overflow-x-hidden;
 }
