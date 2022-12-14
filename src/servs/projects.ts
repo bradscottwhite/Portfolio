@@ -8,7 +8,8 @@ import Pro3Img from '../imgs/pro3-img.png';
 import { ReactIcon } from '../svgIcons/ReactIcon';
 import { AwsIcon } from '../svgIcons/AwsIcon';
 import { TwIcon } from '../svgIcons/TwIcon';
-import { JsIcon } from '../svgIcons/JsIcon';
+//import { JsIcon } from '../svgIcons/JsIcon';
+import { TsIcon } from '../svgIcons/JsIcon';
 import { VimIcon } from '../svgIcons/VimIcon';
 import { FmIcon } from '../svgIcons/FmIcon';
 
@@ -43,7 +44,8 @@ export type {
 const reactProps: StackProps = { Svg: ReactIcon, title: 'React' };
 const twProps: StackProps = { Svg: TwIcon, title: 'Tailwind' };
 const awsProps: StackProps = { Svg: AwsIcon, title: 'Amazon Web Services' };
-const jsProps: StackProps = { Svg: JsIcon, title: 'JavaScript' };
+//const jsProps: StackProps = { Svg: JsIcon, title: 'JavaScript' };
+const tsProps: StackProps = { Svg: TsIcon, title: 'TypeScript' };
 const vimProps: StackProps = { Svg: VimIcon, title: 'Vim/NeoVim' };
 const fmProps: StackProps = { Svg: FmIcon, title: 'Framer Motion' };
 
@@ -53,21 +55,21 @@ export const projects: ProjectProps[] = [
 		url: 'https://master.d3e9ksev6svovb.amplifyapp.com/',
 		img: Pro1Img,
 		github: 'https://github.com/bradscottwhite/firebirdie',
-		stack: [ reactProps, awsProps, twProps, jsProps, vimProps ],
-		desc: 'A minimalistic social media app built with React.js / AWS / Tailwind.css'
+		stack: [ reactProps, awsProps, twProps, vimProps ],
+		desc: 'A minimalistic social media app built with React / AWS / Tailwind.css'
 	}, {
 		title: 'Planner App',
-		url: 'https://master.d11uj72wdz44tv.amplifyapp.com/',
+		url: 'https://bradscottwhite.github.io/min-planner/',
 		img: Pro2Img,
-		github: 'https://github.com/bradscottwhite/planner-app',
-		stack: [ reactProps, awsProps, twProps, jsProps, vimProps, fmProps ],
-		desc: 'A minimalistic productivity planner app built with React.js / AWS / Tailwind.css / Framer Motion'
+		github: 'https://github.com/bradscottwhite/min-planner',
+		stack: [ reactProps, awsProps, twProps, tsProps, vimProps, fmProps ],
+		desc: 'A minimalistic productivity planner app built with React / AWS / TypeScript / Tailwind.css / Framer Motion'
 	}, {
 		title: 'Todo App',
 		url: 'https://master.d3fb1wjw2da8y7.amplifyapp.com/',
 		img: Pro3Img,
 		github: 'https://github.com/bradscottwhite/todo-app',
-		stack: [ reactProps, awsProps, twProps, jsProps, vimProps, fmProps ],
+		stack: [ reactProps, awsProps, twProps, vimProps, fmProps ],
 		desc: 'A minimalist todo app using React / AWS / Tailwind.css / Framer Motion'
 	}
 ];
