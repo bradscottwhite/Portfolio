@@ -9,7 +9,7 @@ import { ReactIcon } from '../svgIcons/ReactIcon';
 import { AwsIcon } from '../svgIcons/AwsIcon';
 import { TwIcon } from '../svgIcons/TwIcon';
 //import { JsIcon } from '../svgIcons/JsIcon';
-import { TsIcon } from '../svgIcons/JsIcon';
+import { TsIcon } from '../svgIcons/TsIcon';
 import { VimIcon } from '../svgIcons/VimIcon';
 import { FmIcon } from '../svgIcons/FmIcon';
 
