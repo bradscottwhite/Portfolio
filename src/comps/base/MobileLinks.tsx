@@ -14,7 +14,7 @@ interface IconProps {
 	MuiIcon: any;
 }
 
-const mobileIcons: IconProps[] = [
+const mobileIcons: IconProps[] = [ /* Add blog!!!!! */
 	{
 		title: 'Skills',
 		href: '#skills',
